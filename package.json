@@ -2,7 +2,7 @@
   "name": "code-counter",
   "displayName": "Code Counter",
   "description": "代码统计分析工具",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "WenHaoHuang",
   "publisher": "WenHaoHuang",
   "files": [
