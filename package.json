@@ -235,7 +235,8 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "yarn run compile",
-    "cz": "git add . && git cz"
+    "cz": "git add . && git cz",
+    "log": "changelog-sn -i CHANGELOG.md -s -r 2"
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",
@@ -252,6 +253,7 @@
     "changelog-sn": "^2.0.5",
     "graceful-fs": "^4.2.2",
     "jsonc-parser": "^2.1.1",
-    "minimatch": "^3.0.4"
+    "minimatch": "^3.0.4",
+    "standard-version": "^7.0.0"
   }
 }
