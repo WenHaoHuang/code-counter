@@ -1,8 +1,3 @@
-/*
- * @Author: wenhao.huang
- * @UserId: 18073766
- * @Create: 2019-10-22 14:27:11
- */
 export default class LineCounter {
   private id: string
   private aliases: string[] = []
