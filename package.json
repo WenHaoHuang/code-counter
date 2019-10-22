@@ -42,7 +42,7 @@
       {
         "command": "extension.code-counter.countInDirectory",
         "category": "CoderCounter",
-        "title": "Hello World"
+        "title": "Count code in directory"
       }
     ],
     "menus": {
