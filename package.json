@@ -3,6 +3,27 @@
   "displayName": "code-counter",
   "description": "代码统计分析工具",
   "version": "0.0.1",
+  "author": "WenHaoHuang",
+  "files": [
+    "out"
+  ],
+  "keywords": [
+    "element",
+    "vue",
+    "components",
+    "suning",
+    "big",
+    "data",
+    "bigdata"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:WenHaoHuang/code-counter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WenHaoHuang/code-counter/issues"
+  },
+  "license": "MIT",
   "engines": {
     "vscode": "^1.39.0"
   },
@@ -196,24 +217,39 @@
       }
     }
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./.czconfigrc.js"
+    }
+  },
   "scripts": {
     "vscode:prepublish": "yarn run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "pretest": "yarn run compile"
+    "pretest": "yarn run compile",
+    "cz": "git add . && git cz"
   },
   "devDependencies": {
+    "@types/glob": "^7.1.1",
     "@types/graceful-fs": "^4.1.3",
     "@types/minimatch": "^3.0.3",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.11.2",
-    "@types/glob": "^7.1.1",
     "@types/vscode": "^1.39.0",
-    "typescript": "^3.6.4",
     "tslint": "^5.20.0",
+    "typescript": "^3.6.4",
     "vscode": "^1.1.36"
   },
   "dependencies": {
+    "changelog-sn": "^2.0.5",
     "graceful-fs": "^4.2.2",
     "jsonc-parser": "^2.1.1",
     "minimatch": "^3.0.4"

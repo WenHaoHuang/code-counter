@@ -8,3 +8,6 @@ vsc-extension-quickstart.md
 **/tslint.json
 **/*.map
 **/*.ts
+yarn.lock
+.commitlintrc.js
+.czconfigrc.js
