@@ -198,11 +198,6 @@
   resolved "http://snpm.cnsuning.com/@types%2fsemver/-/semver-6.0.2.tgz#5e8b09f0e4af53034b1d0fb9977a277847836205"
   integrity sha1-XosJ8OSvUwNLHQ+5l3oneEeDYgU=
 
-"@types/vscode@^1.39.0":
-  version "1.39.0"
-  resolved "http://snpm.cnsuning.com/@types%2fvscode/-/vscode-1.39.0.tgz#46c257df4833ff4c1e6806f0406a873fb79672dd"
-  integrity sha1-RsJX30gz/0weaAbwQGqHP7eWct0=
-
 JSONStream@^1.0.4:
   version "1.3.5"
   resolved "http://snpm.cnsuning.com/JSONStream/-/JSONStream-1.3.5.tgz#3208c1f08d3a4d99261ab64f92302bc15e111ca0"
