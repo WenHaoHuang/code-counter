@@ -464,7 +464,9 @@ class MarkdownTableFormatter {
     return (
       '| ' +
       data
-        .map((d, i) => (typeof d !== 'string' ? this.valueToString(d) : this.columnInfo[i].format === 'uri' ? `[${d}](../${path.relative(vscode.workspace.rootPath, path.join(this.dir, d))})` : d))
+        .map((d, i) =>
+          typeof d !== 'string' ? this.valueToString(d) : this.columnInfo[i].format === 'uri' ? `[${d}](../${path.relative(vscode.workspace.rootPath || '', path.join(this.dir, d))})` : d
+        )
         .join(' | ') +
       ' |'
     )
@@ -580,7 +582,7 @@ class ResultTable {
       // '='.repeat(resultFormat.headerLines[0].length),
       // EXTENSION_NAME,
       `Date : ${dateToString(new Date())}`,
-      `Directory : ./${path.relative(vscode.workspace.rootPath, this.targetDirPath)}`,
+      `Directory : ./${path.relative(vscode.workspace.rootPath || '', this.targetDirPath)}`,
       // `Total : code: ${this.total.code}, comment : ${this.total.comment}, blank : ${this.total.blank}, all ${this.total.total} lines`,
       `Total : ${this.total.files} files,  ${this.total.code} codes, ${this.total.comment} comments, ${this.total.blank} blanks, all ${this.total.total} lines, ${this.total.rate} comment rate`,
       '',
@@ -608,7 +610,7 @@ class ResultTable {
     return [
       `Date : ${dateToString(new Date())}`,
       '',
-      `Directory : ./${path.relative(vscode.workspace.rootPath, this.targetDirPath)}`,
+      `Directory : ./${path.relative(vscode.workspace.rootPath || '', this.targetDirPath)}`,
       '',
       `Total : ${this.total.files} files,  ${this.total.code} codes, ${this.total.comment} comments, ${this.total.blank} blanks, all ${this.total.total} lines, ${this.total.rate} comment rate`
     ]
