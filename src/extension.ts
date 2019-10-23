@@ -408,7 +408,8 @@ class Result {
     return this.code + this.comment + this.blank
   }
   get rate(): string {
-    return ((this.comment / (this.code + this.comment)) * 100).toFixed(2) + '%'
+    const _total = this.code + this.comment
+    return (_total <= 0 ? 0 : (this.comment / _total) * 100).toFixed(2) + '%'
   }
   constructor(filename: string, language: string, errorMessage = '') {
     this.filename = filename
@@ -432,7 +433,8 @@ class Statistics {
     return this.code + this.comment + this.blank
   }
   get rate(): string {
-    return ((this.comment / (this.code + this.comment)) * 100).toFixed(2) + '%'
+    const _total = this.code + this.comment
+    return (_total <= 0 ? 0 : (this.comment / _total) * 100).toFixed(2) + '%'
   }
   constructor(name: string) {
     this.name = name
