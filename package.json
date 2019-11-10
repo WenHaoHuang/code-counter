@@ -12,10 +12,7 @@
     "element",
     "vue",
     "components",
-    "suning",
-    "big",
-    "data",
-    "bigdata"
+    "data"
   ],
   "repository": {
     "type": "git",
